@@ -8,6 +8,9 @@ monthly_challenges = {
     "april": "Read 10 pages of a book",
 }
 
+def monthly_challenge_by_numbers(request,month):
+    return HttpResponse(month)
+
 def monthly_challenge(request, month):
     try:
         challenge_text = monthly_challenges[month.lower()]
